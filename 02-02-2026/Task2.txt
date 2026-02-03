@@ -1,0 +1,45 @@
+//Student table insertion
+
+INSERT INTO STUDENTS (student_id, name, email, age, join_date, active_flag)
+VALUES
+(9000000001,'Amogh','amogh@gmail.com',21, '2026-01-05', 1),
+(9000000002,'Arjun','arjun@gmail.com',23, '2026-01-10', 1),
+(9000000003,'Neha','neha@gmail.com',20, '2026-01-15', 0),
+(9000000004,'Sahith','sahith@gmail.com',22, '2026-01-20', 1),
+(9000000005,'Rishi','rishi@gmail.com',19, '2026-01-25', 1),
+(9000000006,'Snehith','snehith@gmail.com',26, '2026-02-01', 1),
+(9000000007,'Yuvraj','yuvraj@gmail.com',28, '2026-02-05', 1),
+(9000000008,'Jaideep','jaideep@gmail.com',22, '2026-02-10', 0),
+(9000000009,'Kiran','kiran@gmail.com',24, '2026-02-15', 1),
+(9000000010,'Priya','priya@gmail.com',21, '2026-02-20', 1);
+
+
+//Course table insertion
+
+INSERT INTO COURSES (course_id, course_name, fees)
+VALUES
+(1, 'Java',15000.50),
+(2, 'SQL',8000.75),
+(3, 'Spring Boot', 18000.25),
+(4, 'React',16000.40),
+(5, 'Node JS',9000.00);
+
+//Enrollments
+
+INSERT INTO ENROLLMENTS (enroll_id, student_id, course_id)
+VALUES
+(80000000001, 9000000001, 1),
+(80000000002, 9000000001, 2),
+(80000000003, 9000000002, 1),
+(80000000004, 9000000002, 3),
+(80000000005, 9000000003, 2),
+(80000000006, 9000000004, 4),
+(80000000007, 9000000005, 1),
+(80000000008, 9000000005, 5),
+(80000000009, 9000000006, 3),
+(80000000010, 9000000007, 4),
+(80000000011, 9000000007, 2),
+(80000000012, 9000000008, 5),
+(80000000013, 9000000009, 1),
+(80000000014, 9000000009, 3),
+(80000000015, 9000000010, 2);

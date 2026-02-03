@@ -1,0 +1,27 @@
+SELECT *
+FROM STUDENTS
+WHERE age > 20
+ORDER BY age;
+
+
+SELECT COUNT(*) AS count_with_a
+FROM STUDENTS
+WHERE name LIKE '%a%';
+
+
+SELECT *
+FROM COURSES
+WHERE fees BETWEEN 5000 AND 20000
+ORDER BY fees;
+
+
+SELECT *
+FROM STUDENTS
+WHERE active_flag = 0
+  AND age IS NOT NULL;
+
+
+SELECT student_id, COUNT(*) AS enrollment_count
+FROM ENROLLMENTS
+GROUP BY student_id
+HAVING COUNT(*) > 1;

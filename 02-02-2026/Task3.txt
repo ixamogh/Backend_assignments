@@ -1,0 +1,53 @@
+INSERT INTO STUDENTS (student_id, name, email, age, registration_date, active_flag)
+VALUES
+(9000000011,'Amith','amith@gmail.com',25,'2026-03-01',1),
+(9000000012,'Aryan','aryan@gmail.com',26,'2026-03-02',0),
+(9000000013,'Karthik','karthik@gmail.com',29,'2026-03-05',1);
+
+INSERT INTO COURSES (course_id, course_name, fees)
+VALUES (6,'AIML',95000.00);
+
+INSERT INTO ENROLLMENTS (enroll_id, student_id, course_id, enroll_timestamp)
+VALUES
+(90000000022,9000000012,2,'2026-03-05 10:45:30'),
+(90000000023,9000000013,3,'2026-03-06 14:20:00');
+
+SELECT * FROM STUDENTS;
+
+SELECT name, email FROM STUDENTS;
+
+SELECT * FROM STUDENTS ORDER BY age DESC;
+
+SELECT TOP 5 * FROM STUDENTS ORDER BY registration_date;
+
+SELECT DISTINCT age FROM STUDENTS;
+
+SELECT DISTINCT course_name FROM COURSES;
+
+UPDATE STUDENTS
+SET age = 27
+WHERE student_id = 9000000012;
+
+UPDATE STUDENTS
+SET active_flag = 0
+WHERE student_id IN (9000000009, 9000000010);
+
+UPDATE COURSES
+SET fees = fees * 1.1;
+
+DELETE FROM STUDENTS
+WHERE student_id = 9000000007;
+
+DELETE FROM COURSES
+WHERE fees < 1000;
+
+DELETE FROM ENROLLMENTS
+WHERE enroll_timestamp < '2026-02-01';
+
+ALTER TABLE STUDENTS
+ALTER COLUMN name VARCHAR(225);
+
+EXEC sp_rename 'STUDENTS.join_date', 'registration_date', 'COLUMN';
+
+ALTER TABLE STUDENTS
+ADD phone_number VARCHAR(15);
