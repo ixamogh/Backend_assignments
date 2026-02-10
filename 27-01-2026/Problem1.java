@@ -37,7 +37,7 @@ public class Problem1{
         List<Map.Entry<String,Integer>> ls=new ArrayList<>(map.entrySet());
         ls.sort((a,b)->b.getValue()-a.getValue());
 
-        System.out.println("\nReversed Sentences (word-wise):");
+        System.out.println("\nReversed Sentences:");
         for(String s:sentences){
             String[] sWords=s.trim().split(" ");
             StringBuilder result=new StringBuilder();
